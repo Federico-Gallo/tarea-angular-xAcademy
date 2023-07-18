@@ -1,0 +1,13 @@
+<div class="contenedor">
+    <mat-list *ngFor="let producto of listProduct">
+        <div class="lista">
+            <mat-list-item>{{producto.nombre}} ------------- {{producto.costo}}</mat-list-item>
+            <!--<button mat-raised-button color="accent">Editar</button>-->
+            <button mat-raised-button color="warn"(click)="onDelet(producto)">Eliminar</button>
+        </div> 
+    </mat-list>
+    <!--<mat-paginator #paginator [length]="100"
+        [pageSize]="5"
+        aria-label="Select page">
+    </mat-paginator>-->
+</div>

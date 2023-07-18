@@ -1,0 +1,15 @@
+<div class="contenedor-lista">
+  <h2>Lista de Productos</h2>
+  <button mat-raised-button color="primary" *ngIf="isList" (click)="onClick()">Mostrar Lista</button>
+  <button mat-raised-button color="primary" *ngIf="!isList" (click)="onClick()">Ocultar Lista</button>
+  <div class="container-agregar">
+    <mat-form-field>
+        <input matInput placeholder="Ingrese Nombre" required [(ngModel)]="selectProduct[i].nombre">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Ingrese Costo" required [(ngModel)]="selectProduct[i].costo">
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="addProduct()">Agregar</button>
+  </div>
+  <app-produt-list (eventoHijo)="procesaPropagar($event)" [listProduct]="productList" *ngIf="!isList"></app-produt-list>
+</div>

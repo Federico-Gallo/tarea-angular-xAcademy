@@ -1,0 +1,23 @@
+.contenedor-lista{
+    display: flex;
+    flex-direction: column;
+    //align-items: flex-start;
+    //margin-top: 70px;
+    margin-top: 20px;
+    place-items: center;
+    //height: 100vh;
+    min-height: 100vh;
+}
+.contenedor-lista h2{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.container-agregar {
+   margin-top: 10px;
+}
+
+.container-agregar mat-form-field input {
+    height: 30px;
+}
